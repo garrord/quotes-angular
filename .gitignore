@@ -1,0 +1,56 @@
+# Visual Studio generated files
+.vs/
+bin/
+obj/
+*.suo
+*.user
+*.VC.db
+*.VC.opendb
+*.sdf
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+build/
+[Bb]in/
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# NuGet packages
+packages/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Resharper cache, temp and test files
+_ReSharper*/
+*.resharper*
+*.[Rr]e[Ss]harper
+
+# NCrunch
+_NCrunch_*
+.*crunch*.local.xml
+
+# Windows GUID Project files
+*.user
+
+# Zero Build Artifacts
+x64/
+x86/
+bld/
+
+# .NET Core
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+# Build Folders (ie. Visual Studio cache)
+[Bb]uild/
+
+# Backup files
+*~
+*.bak
