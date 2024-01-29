@@ -12,6 +12,11 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddCors(options => options.AddPolicy("AllowSpecificOrigin",
+    builder => builder.WithOrigins("*")
+    .AllowAnyMethod()
+    .AllowAnyHeader()
+));
 builder.Services.AddDbContext<QuoteContext>(dbContextOptions => dbContextOptions
     .UseSqlServer("Server=localhost\\MSSQLSERVER06;Database=Quotes;Trusted_Connection=true;TrustServerCertificate=true;"));
 builder.Services.AddScoped<IQuoteQueryRepository, QuoteQueryRepository>();
@@ -27,6 +32,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthorization();
 
